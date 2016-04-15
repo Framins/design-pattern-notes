@@ -77,11 +77,3 @@ class CashierDirector
 $director = new CashierDirector();
 print_r($director->build(new hamburgerBuilder));
 print_r($director->build(new cokeBuilder));
-
-
-
-
-
-
-
-

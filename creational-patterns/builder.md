@@ -12,17 +12,20 @@
 
 # UML
 ![common](http://i.imgur.com/Hr6IgKy.png)
+
 # Example
 
 ![representation image](http://i.imgur.com/MTbIZou.png)
 
 ```
 <?php
+
 class Product
 {
     public $_name;
     public $_account;
 }
+
 abstract class foodBuilder
 {
     protected $_product;
@@ -36,6 +39,7 @@ abstract class foodBuilder
     public abstract function setAccount();
     public abstract function getResult();
 }
+
 class hamburgerBuilder extends  foodBuilder
 {
     protected $_food = 'hamburger';
@@ -53,6 +57,7 @@ class hamburgerBuilder extends  foodBuilder
         return $this->_product;
     }
 }
+
 class cokeBuilder extends foodBuilder
 {
     protected $_food = 'coke';
@@ -70,6 +75,7 @@ class cokeBuilder extends foodBuilder
         return $this->_product;
     }
 }
+
 class CashierDirector
 {
     public function build(foodBuilder $builder)
@@ -82,7 +88,6 @@ class CashierDirector
 $director = new CashierDirector();
 print_r($director->build(new hamburgerBuilder));
 print_r($director->build(new cokeBuilder));
-
 ```
 
 
@@ -98,7 +103,6 @@ print_r($director->build(new cokeBuilder));
 * 每一個Builder都相對獨立，而與其它的Builder無關。
 * 模式所建造的最終產品更易於控制。
 
-
 #優點
 
 builder pattern可以很好的將一個對象的實現與相關的“業務”邏輯分離開來，從而可以在不改變事件邏輯的前提下，使增加(或改變)實現變得非常容易。
@@ -112,4 +116,3 @@ builder接口的修改會導致所有執行類的修改。
 > * [Builder Design Pattern](https://sourcemaking.com/design_patterns/builder)
 > * [設計模式詳解](http://yansu.org/2014/04/19/design-patterns-of-php.html)
 > * [愛T-blog-php 建造者生成器模式](http://blog.itiwin.cn/php-builder-pattern.html)
-
