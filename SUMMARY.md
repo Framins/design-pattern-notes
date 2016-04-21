@@ -18,7 +18,7 @@
 * Structural Patterns
   * Proxy Pattern
   * Bridge Pattern
-  * Decorator Pattern
+  * Decorator Pattern(creational-patterns/decorator.md)
   * Flyweight Pattern
   * Facade Pattern
   * Adapter Pattern
