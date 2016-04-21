@@ -27,6 +27,7 @@ Intent
 
 Introduction
 -------------
+
 > - 裝飾者模式可以對一個物件更有彈性的加上功能。
 > - 動態地給一個物件附加一些額外的職責，同時保持相同的介面。
 > - 就擴充功能來說，裝飾者提供了繼承機制的彈性方案。
@@ -34,12 +35,10 @@ Introduction
 UML
 -------------
 ![裝飾者模式UML](http://i.imgur.com/agdSmRa.png)
+
 > - component: 核心角色，抽象元件，是介面或是抽象類別，定義我們最核心的物件。
-
 > - concreteComponet: 被裝飾者角色，具體元件，實作抽象元件。
-
 > - decorator: 裝飾者角色，實作元件介面或是抽象方法。
-
 > - concreteDecorator: 具體裝飾者角色，實作裝飾者。
 
 早餐店UML
@@ -50,17 +49,15 @@ How to work
 -------------
 ![包飯糰](http://i.imgur.com/tiNUQBE.png)
 
-> 1.拿一個吐司的主食物件
-
-> 2.以起司物件裝飾
-
-> 3.以火腿物件裝飾
-
-> 4.呼叫cost()方法，並依賴委派(delegate)將配料的價格加上去
+> 1. 拿一個吐司的主食物件
+> 2. 以起司物件裝飾
+> 3. 以火腿物件裝飾
+> 4. 呼叫cost()方法，並依賴委派(delegate)將配料的價格加上去
 
 Example
 -------------
-<pre><code>
+
+```php
 /**
  * 早餐店菜單的抽象類別(component)
  */
@@ -74,9 +71,9 @@ abstract class BreakfastComponent
     // 子類別實作，取得成本
     public abstract function getCost();
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * 主食吐司具體實作(concreteComponent)
  */
@@ -97,9 +94,9 @@ class Toast extends BreakfastComponent
         return 10;
     }
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * 主食漢堡具體實作(concreteComponent)
  */
@@ -120,9 +117,9 @@ class Hamburger extends BreakfastComponent
         return 20;
     }
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * 配料的抽象類別(decorator)
  * 聯繫元件介面的連結
@@ -134,9 +131,9 @@ abstract class CondimentDecorator extends BreakfastComponent
         $this->name = $breakfast;
     }
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * 配料Cheese的具體實作(concreteComponent)
  */
@@ -152,9 +149,9 @@ class Cheese extends CondimentDecorator
         return 10 + $this->name->getCost();
     }
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * 配料Ham的具體實作(concreteComponent)
  */
@@ -170,13 +167,13 @@ class Ham extends CondimentDecorator
         return 15 + $this->name->getCost();
     }
 }
-</code></pre>
+```
 
-<pre><code>
+```php
 /**
  * Client
  */
- // 點吐司
+// 點吐司
 $toast = new Toast();
 var_dump('餐點:' . $toast->getName());
 var_dump('價格:' . $toast->getCost() . '元');
@@ -196,13 +193,13 @@ $toastAddCheese = new Cheese($toast);
 $toastAddCheeseAddHam = new Ham($toastAddCheese);
 var_dump('餐點:' . $toastAddCheeseAddHam->getName());
 var_dump('價格:' . $toastAddCheeseAddHam->getCost() . '元');
-</code></pre>
+```
 
-Advatages and Disadvantages
+Advantages and Disadvantages
 -------------
-> - Advatage:
+> - Advantages:
 > 彈性動態擴充功能，不影響原本的程式。
-> - Disadavatage:
+> - Disadvantages:
 > 裝飾者會導致程式中出現很多小類別，導致程式變複雜。
 
 When
@@ -225,8 +222,3 @@ Reference
 <書籍>PHP設計模式
 
 <書籍>設計模式之禪
-
-
-
-
-
