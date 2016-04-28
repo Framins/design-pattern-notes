@@ -2,7 +2,7 @@
 
 ### 用途
 將物件狀態恢復到某動作前
-```
+```javascript
 class Player {
     constructor (username) {
         this.username = username;
@@ -84,7 +84,7 @@ console.log(eric7578.toString());
 ### 和命令模式的差異？
 協同工作，可以在命令模式內產生undo的命令物件
 
-```
+```javascript
 // robots.txt 處理
 function CommandRobotstxt() {
     return function (path) {
