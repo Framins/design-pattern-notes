@@ -16,7 +16,7 @@ Recommend Book: [Learning Javascript Design Patterns](http://www.books.com.tw/pr
 ## Default
 預設用法
 
-```
+```javascript
 function inherit(Child, Parent) {
 	Child.prototype = new Parent();
 }
@@ -38,7 +38,7 @@ Child extends both `this` and prototype props from parent.
 * no need all props from `this`
 * pass parameters to child will cost too much
 
-```
+```javascript
 function Child(name) { this.name = name; }
 ```
 
@@ -54,7 +54,7 @@ function Child(name) { this.name = name; }
 
 借用建構式及原型鏈
 
-```
+```javascript
 function Parent(name) { this.name = name || 'Adam'; }
 Parent.prototype.say = function() { return this.name; }
 
@@ -78,10 +78,10 @@ Child will get independent props from parent and also refer to parent prototype.
 
 * parent constructor has been called twice
 
-```
-Parent.apply(this, arguments); <--
+```javascript
+Parent.apply(this, arguments); // <--
 
-Child.prototype = new Parent(); <--
+Child.prototype = new Parent(); // <--
 ```
 
 **缺點**
@@ -92,7 +92,7 @@ Child.prototype = new Parent(); <--
 
 共享原型及代理建構式（聖杯模式）
 
-```
+```javascript
 var inherit = (function() {
     var Proxy = function() {};
     return function(Child, Parent) {
@@ -118,7 +118,7 @@ Creating a temporary constructor which prototype referred by child share prototy
 
 原型繼承
 
-```
+```javascript
 function object(o) {
     function F() {}
     F.prototype = o;
@@ -136,7 +136,7 @@ Just like holy grail pattern, creating an empty object and its prototype refer t
 
 **ES5**
 
-```
+```javascript
 var parent = { name: "John" };
 var child = Object.create(parent, { age: { value: 2 } });
 console.log(child.hasOwnProperty("age")); // true
@@ -144,7 +144,7 @@ console.log(child.hasOwnProperty("age")); // true
 
 **ES6**
 
-```
+```javascript
 class Parent {
   constructor() {
     this.name = "John";
@@ -174,7 +174,7 @@ Copying object or array in shallow copy will only make a reference to parent, so
 
 淺複製對於物件（包含陣列）的複製僅利用參考的方式，因此如果在 child 處變更物件的值，相對地 parent 處也會受到影響。
 
-```
+```javascript
 function extend(parent, child) {
   var i;
   child = child || {};
@@ -199,7 +199,7 @@ Deep copy will make copy for every properties include object and array by recurs
 
 深複製對物件（包含陣列）則會使用遞迴的方式將其屬性一一完整複製。
 
-```
+```javascript
 function extendDeep(parent, child) {
   var i,
   toStr = Object.prototype.toString,
@@ -229,7 +229,7 @@ console.log(parent.job, child.job);
 
 方法借用及綁定
 
-```
+```javascript
 // borrow method from array
 // 從陣列借用 join 方法
 function f() {
@@ -251,7 +251,7 @@ function bind(object, method) {
 
 借用方法
 
-```
+```javascript
 // ES5
 var parent = { name: "John", say: function (greet) { return greet + ", " + this.name; } };
 var child = { name: "Jacob" };
@@ -282,7 +282,7 @@ console.log(c.say("Yo"));
 
 綁定方法
 
-```
+```javascript
 // ES5 Class
 React.createClass({
   onClick: function(event) {},
@@ -331,7 +331,7 @@ class Counter extends React.Component {
 
 類別並不會提升
 
-```
+```javascript
 var p = new Parent();
 class Parent {}
 ```
