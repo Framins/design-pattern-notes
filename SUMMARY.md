@@ -25,7 +25,7 @@
   * Composite Pattern
 * Behavioral Patterns
   * Template Method Pattern
-  * Command Pattern
+  * [Command Pattern](behavioral-patterns/command.md)
   * Strategy Pattern
   * Chain-of-responsibility Pattern
   * Iterator Pattern
@@ -34,7 +34,7 @@
   * State Pattern
   * Mediator Pattern
   * Visitor Pattern
-  * Memento Pattern
+  * [Memento Pattern](behavioral-patterns/memento.md)
   * Concurrency Pattern
 * Another Patterns
   * Registry of Singleton Pattern
