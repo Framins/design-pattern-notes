@@ -2,7 +2,7 @@
 
 ### Story
 從前從前，有一隻爬蟲他的使命就是爬出yahoo首頁的資料
-```
+```javascript
 class Crawler {
     runOnPath (path) {
         console.log("抓" + path + "內的資料");
@@ -14,7 +14,7 @@ crawler.runOnPath("http://tw.yahoo.com");
 ```
 但是某天J...immy說，聽過robots.txt？他是禁止爬蟲進入某些頁面的一份文件。  
 幫我加一下，應該很快吧。
-```
+```javascript
 class Crawler {
     setRobots (txt) {
         console.log("分析robots.txt");
@@ -45,7 +45,7 @@ crawler.runOnPath(url);
 請求，處理請求，各自獨立？  
 
 ### Solution
-```
+```javascript
 // robots.txt 處理
 function CommandRobotstxt() {
     return function (path) {
