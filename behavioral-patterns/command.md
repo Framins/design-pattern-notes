@@ -12,7 +12,7 @@ class Crawler {
 const crawler = new Crawler();
 crawler.runOnPath("http://tw.yahoo.com");
 ```
-但是某天J...immy說，聽過robots.txt？他是禁止爬蟲進入某些頁面的一份文件。  
+但是某天 J...immy 說，聽過 `robots.txt` ？他是禁止爬蟲進入某些頁面的一份文件。  
 幫我加一下，應該很快吧。
 ```javascript
 class Crawler {
@@ -35,9 +35,9 @@ crawler.setRobots(url + "/robots.txt");
 crawler.checkRobots(url);
 crawler.runOnPath(url);
 ```
-結果某天J..ack說，你抓取網頁速度太快了！我要隨機分佈！隨機一個數字，應該很快。  
-後天J...ohn又說，你每抓一個網頁，請記錄一筆資訊！寫一筆資料，應該很快。  
-大後天J...query又說....應該很快  
+結果某天 J..ack 說，你抓取網頁速度太快了！我要隨機分佈！隨機一個數字，應該很快。  
+後天 J...ohn 又說，你每抓一個網頁，請記錄一筆資訊！寫一筆資料，應該很快。  
+大後天 J...query 又說....應該很快  
 爬蟲表示：
 
 ### Problem
@@ -128,7 +128,7 @@ crawlerUndo.runOnPath();
 ![命令模式](https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1326904.png)
 
 ##### Receiver
-接收命令的物件，主要就是執行命令的人，此例中就是path string, 因為透過各種command function 可以對path進行加工(ex: robotstxt裡面的修整刪選..等等)
+接收命令的物件，主要就是執行命令的人，此例中就是path string, 因為透過各種command function 可以對path進行加工(ex: `robots.txt` 裡面的修整刪選..等等)
 ##### Command  
 命令物件的樣板，範例內未有，但是每個Command function回傳的皆可視為此物件之子類別
 ##### CocreteCommand  
@@ -141,7 +141,7 @@ crawlerUndo.runOnPath();
 Command Pattern 目的
 1. 方便log
 2. 允許Redo  
-(書上說der, 私以為有點牽強，因為書上只用了一段console.log("Undo") 就呼嚨過去了RRRRR)
+(書上說der, 私以為有點牽強，因為書上只用了一段 `console.log("Undo")` 就呼嚨過去了RRRRR)
 3. 命令物件，執行者兩者角色分離。比較好加功能。
 
 > 敏捷開發原則：不要為程式碼加上猜測，或者是可能需要的功能。如果不清楚是否需要命令模式。就不要急著實作。只有在真正需要如取消/恢復操作，或者是有龐大命令佇列需求的時候再將程式重構為命令模式。
