@@ -16,7 +16,7 @@
   * [Builder Pattern](creational-patterns/builder.md)
   * [Prototype Pattern](creational-patterns/prototype.md)
 * Structural Patterns
-  * Proxy Pattern
+  * [Proxy Pattern](structural-patterns/proxy.md)
   * Bridge Pattern
   * [Decorator Pattern](structural-patterns/decorator.md)
   * Flyweight Pattern
