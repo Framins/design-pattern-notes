@@ -38,3 +38,4 @@
   * Concurrency Pattern
 * Another Patterns
   * Registry of Singleton Pattern
+* [Compare Patterns](compare.md)
