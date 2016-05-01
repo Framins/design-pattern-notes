@@ -30,6 +30,8 @@ class Alex implements Worker
 
 但每次佈署文件丟過來，都是東缺西缺的，所以 Alex 決定找個代理人 Miles ，來幫他檢查文件。
 
+即然是代理人了，被授權做一樣的工作是很合理的
+
 ```php
 class Miles implements Worker
 {
