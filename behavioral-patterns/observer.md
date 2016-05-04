@@ -160,11 +160,12 @@ $worker->deploy('git pull 就對了');
 
 通用類別圖如下：
 
-![](http://plantuml.com/plantuml/png/XOyn3i8m34NtdC9ZAvGBL1KB1s3W18xhYY2KeCH5GctlZbIQ89A1qVRp-xPrmc54OhXCviOaC2k00yneeWGaMG55aAwDx-1i8eSdXxP41lwBE2zsV3MjMfNDcOckGwV7WC8RhkYECSB9EmeilDzPT9D9gVI7Fdxr7MZmUn4pqIzQLzgyypFD-WA7lcQsjFYPlm40)
+![](http://plantuml.com/plantuml/png/XOz12i9034NtEKMMBJ8NAEB60xZm19aqnH6PaKmgIEtT1UcCs2vSvkVb_vyGJNGW5ZoF_YfiE07Y3YVosPJOPYGpuakJEZpvBFeGRTT8Bt-Hc2mCpwQ56KBDBFGsTBptPFB1WM-KCnvJP1MJfUTABKu0vO_a3b__3XscPSWLsR-Ss_ZMcvzjKTy0)
 
 Plantuml 程式碼
 
-```uml
+```plantuml
+@startuml
 interface Subject {
   + {abstract} attach(o: Observer)
   + {abstract} detach(o: Observer)
@@ -177,10 +178,10 @@ interface Observer {
 class ConcreteSubject
 class ConcreteObserver
 
-Subject -> Observer : - observers
+Subject o-> Observer : - observers
 Subject <|-- ConcreteSubject
 Observer <|-- ConcreteObserver
-ConcreteSubject <- ConcreteObserver : - subject
+@enduml
 ```
 
 各角色定義
