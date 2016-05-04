@@ -104,6 +104,21 @@ Proxy Pattern 的定義：
 
 ![](http://plantuml.com/plantuml/png/oymhIIrAIqnELGWkJSfAJIvHgEPI009jXUh4fEAIeiJaabg5eDJ2qjJY4WrDhbgkv9p4ucAWI68EL0DK9A0elwAI2sQ8JOskBeeY50c8MYHf1Hkee8ALWZQIE000)
 
+Plantuml 程式碼如下：
+
+```plantuml
+@startuml
+interface Subject {
+    + {abstract} Request()
+}
+class RealSubject
+class Proxy
+Subject <|-- RealSubject
+Subject <|-- Proxy
+RealSubject <- Proxy : +RealSubject
+@enduml
+```
+
 各角色定義如下：
 
 * Subject: 抽象主題角色，一個普通業務類型的定義
