@@ -23,21 +23,21 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，" . $document;
-        echo "已執行完畢";
+        echo "文件是這樣的，", $document, PHP_EOF;
+        echo "已執行完畢", PHP_EOF;
     }
 }
 ```
 
-而 Boss 對佈署深感興趣－－畢竟是直接的利益關係者－－，他希望佈署完能通知他，於是 deploy 的流程被修改了
+Boss 對佈署深感興趣－－畢竟是直接的利益關係者－－，他希望佈署完能通知他，於是 deploy 的流程被修改了
 
 ```php
 class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，" . $document;
-        echo "已執行完畢";
+        echo "文件是這樣的，", $document, PHP_EOF;
+        echo "已執行完畢", PHP_EOF;
         
         // 通知 Boss ，老闆想宣傳
         $boss = new Boss();
@@ -53,8 +53,8 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，" . $document;
-        echo "已執行完畢";
+        echo "文件是這樣的，", $document, PHP_EOF;
+        echo "已執行完畢", PHP_EOF;
         
         // 通知 Boss ，老闆想宣傳
         $boss = new Boss();
@@ -85,7 +85,7 @@ class Boss implements Watch {
         $this->propaganda();
     }
     public function propaganda() {
-        echo "我是 Boss ，我想宣傳";
+        echo "我是 Boss ，我想宣傳", PHP_EOF;
     };
 }
 
@@ -94,7 +94,7 @@ class Marketing implements Watch {
         $this->prepare();
     }
     public function prepare() {
-        echo "我是 Marketing ，我想提早準備";
+        echo "我是 Marketing ，我想提早準備", PHP_EOF;
     };
 }
 
@@ -103,7 +103,7 @@ class Customer implements Watch {
         $this->use();
     }
     public function use() {
-        echo "我是 Customer ，我想使用服務";
+        echo "我是 Customer ，我想使用服務", PHP_EOF;
     };
 }
 ```
@@ -117,11 +117,13 @@ class Alex implements Worker
 
     public function deploy($document)
     {
-        echo "文件是這樣的，" . $document;
-        echo "已執行完畢";
+        echo "文件是這樣的，", $document, PHP_EOF;
+        echo "已執行完畢", PHP_EOF;
         
         // 公告
-        foreach 
+        foreach ($this->watcher as $watcher) {
+            $watcher->watch();
+        }
     }
     
     public function addWatcher(Watch $watcher)
