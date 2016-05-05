@@ -129,12 +129,13 @@ RealSubject <- Proxy : +RealSubject
 
 Pros
 
+* 代理角色與真實角色的職責很清楚，符合 Single Responsibility Principle 原則
 * 使用代理角色協調 Clinet 與真實角色，可適度降低系統耦合性
 * 使用代理角色限制 Client 對真實角色的操作權限
 
-Cons:
+Cons
 
-* 客戶端到真實角色間多了代理角色，效能會降低。當代理角色處理的事物繁多時，會更明顯。
+* 客戶端到真實角色間多了代理角色協調，效能會降低。當代理角色處理的事物繁多時，會更明顯。
 
 ---
 
