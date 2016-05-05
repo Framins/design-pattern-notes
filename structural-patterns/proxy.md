@@ -121,9 +121,9 @@ RealSubject <- Proxy : +RealSubject
 
 各角色定義如下：
 
-* Subject: 抽象主題，一個介面或抽象類別
-* RealSubject: 真實角色，真實實作業務的角色
-* Proxy: 代理角色，它不負責實作業務，只負責應用真實角色
+* *Subject* 抽象主題，一個介面或抽象類別
+* *RealSubject* 真實角色，真實實作業務的角色
+* *Proxy* 代理角色，它不負責實作業務，只負責應用真實角色
 
 ### Pros and Cons
 
