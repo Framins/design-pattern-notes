@@ -66,7 +66,7 @@ class Alex implements Worker
         
         // 通知 Customer ，客戶想使用服務
         $customer = new Customer();
-        $customer->use();
+        $customer->useService();
     }
 }
 ```
@@ -86,7 +86,7 @@ class Boss implements Watch {
     }
     public function propaganda() {
         echo "我是 Boss ，我想宣傳", PHP_EOL;
-    };
+    }
 }
 
 class Marketing implements Watch {
@@ -95,16 +95,16 @@ class Marketing implements Watch {
     }
     public function prepare() {
         echo "我是 Marketing ，我想提早準備", PHP_EOL;
-    };
+    }
 }
 
 class Customer implements Watch {
     public function watch() {
-        $this->use();
+        $this->useService();
     }
-    public function use() {
+    public function useService() {
         echo "我是 Customer ，我想使用服務", PHP_EOL;
-    };
+    }
 }
 ```
 
