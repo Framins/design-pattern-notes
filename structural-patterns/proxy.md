@@ -22,8 +22,8 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，" . $document;
-        echo "已執行完畢";
+        echo "文件是這樣的，", $document, PHP_EOL;
+        echo "已執行完畢", PHP_EOL;
     }
 }
 ```
@@ -50,7 +50,7 @@ class Miles implements Worker
 
     public function checkDocument($document)
     {
-        echo "文件已檢查";
+        echo "文件已檢查", PHP_EOL;
         return true;
     }
 }
@@ -245,7 +245,7 @@ class Client
 
 Delegator 沒實作，場景沒建構 Alex 物件，可是很神奇的程式卻能執行成功？這就是動態代理！
 
-今天如果想在佈署前檢查文件的話，只要改一下動態代理：
+如果想在佈署前檢查文件的話，只要改一下動態代理：
 
 ```php
 class Delegator
