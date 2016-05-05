@@ -245,7 +245,7 @@ class Client
 
         echo "產生動態代理物件", PHP_EOL;
 
-        $proxy = new Delegator('Ifalo\DP\Proxy\Alex');
+        $proxy = new Delegator('Alex');
 
         echo "執行佈署", PHP_EOL;
 
