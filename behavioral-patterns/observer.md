@@ -23,8 +23,8 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，", $document, PHP_EOF;
-        echo "已執行完畢", PHP_EOF;
+        echo "文件是這樣的，", $document, PHP_EOL;
+        echo "已執行完畢", PHP_EOL;
     }
 }
 ```
@@ -36,8 +36,8 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，", $document, PHP_EOF;
-        echo "已執行完畢", PHP_EOF;
+        echo "文件是這樣的，", $document, PHP_EOL;
+        echo "已執行完畢", PHP_EOL;
         
         // 通知 Boss ，老闆想宣傳
         $boss = new Boss();
@@ -53,8 +53,8 @@ class Alex implements Worker
 {
     public function deploy($document)
     {
-        echo "文件是這樣的，", $document, PHP_EOF;
-        echo "已執行完畢", PHP_EOF;
+        echo "文件是這樣的，", $document, PHP_EOL;
+        echo "已執行完畢", PHP_EOL;
         
         // 通知 Boss ，老闆想宣傳
         $boss = new Boss();
@@ -85,7 +85,7 @@ class Boss implements Watch {
         $this->propaganda();
     }
     public function propaganda() {
-        echo "我是 Boss ，我想宣傳", PHP_EOF;
+        echo "我是 Boss ，我想宣傳", PHP_EOL;
     };
 }
 
@@ -94,7 +94,7 @@ class Marketing implements Watch {
         $this->prepare();
     }
     public function prepare() {
-        echo "我是 Marketing ，我想提早準備", PHP_EOF;
+        echo "我是 Marketing ，我想提早準備", PHP_EOL;
     };
 }
 
@@ -103,7 +103,7 @@ class Customer implements Watch {
         $this->use();
     }
     public function use() {
-        echo "我是 Customer ，我想使用服務", PHP_EOF;
+        echo "我是 Customer ，我想使用服務", PHP_EOL;
     };
 }
 ```
@@ -117,8 +117,8 @@ class Alex implements Worker
 
     public function deploy($document)
     {
-        echo "文件是這樣的，", $document, PHP_EOF;
-        echo "已執行完畢", PHP_EOF;
+        echo "文件是這樣的，", $document, PHP_EOL;
+        echo "已執行完畢", PHP_EOL;
         
         // 公告
         foreach ($this->watcher as $watcher) {
