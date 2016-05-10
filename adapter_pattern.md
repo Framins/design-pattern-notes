@@ -59,6 +59,7 @@ class FacebookAdapter implements IfaloInterface
 
     public function __construct(Facebook $facebook)
     {
+        // Adaptee
         $this->facebook = $facebook;
     }
 
