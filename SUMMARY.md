@@ -24,7 +24,7 @@
    * [Adapter Pattern](adapter_pattern.md)
    * Composite Pattern
 * Behavioral Patterns
-   * Template Method Pattern
+   * [Template Method Pattern](behavioral-patterns/template.md)
    * [Command Pattern](behavioral-patterns/command.md)
    * Strategy Pattern
    * Chain-of-responsibility Pattern
