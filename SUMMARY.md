@@ -30,7 +30,7 @@
   * Strategy Pattern
   * Chain-of-responsibility Pattern
   * Iterator Pattern
-  * Observer Pattern
+  * [Observer Pattern](behavioral-patterns/observer.md)
   * Interpreter Pattern
   * State Pattern
   * Mediator Pattern
