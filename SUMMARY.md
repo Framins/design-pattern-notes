@@ -1,39 +1,36 @@
-# Design Pattern Notes
+# Summary
 
-* Introdution
-  * Design Principles
-    * Single Responsibility Principle
-    * Liskov Substitution Principle
-    * Dependency Inversion Principle
-    * Interface Segregation Principle
-    * Least Knowledge Principle
-  * Open Close Principle
-* Creational Patterns
-  * Singleton Pattern
-  * Simple Factory Pattern
-  * Factory Method Pattern
-  * Abstract Factory Pattern
-  * Builder Pattern
+* [Introdution](README.md)
+* [Design Principles](design-principles/README.md)
+  * [Single Responsibility Principle](design-principles/single-responsibility.md)
+  * [Open Close Principle](design-principles/open-close.md)
+  * [Liskov Substitution Principle](design-principles/liskov-substitution.md)
+  * [Interface Segregation Principle](design-principles/interface-segregarion.md)
+  * [Dependency Inversion Principle](design-principles/dependency-inversion.md)
+* [Creational Patterns](creational-patterns/README.md)
+  * [Singleton Pattern](creational-patterns/singleton.md)
+  * [Simple Factory Pattern](creational-patterns/simple-factory.md)
+  * [Factory Method Pattern](creational-patterns/factory-method.md)
+  * [Abstract Factory Pattern](creational-patterns/abstract-factory.md)
+  * [Builder Pattern](creational-patterns/builder.md)
   * [Prototype Pattern](creational-patterns/prototype.md)
-* Structural Patterns
-  * Proxy Pattern
-  * Bridge Pattern
-  * Decorator Pattern
-  * Flyweight Pattern
-  * Facade Pattern
-  * Adapter Pattern
-  * Composite Pattern
-* Behavioral Patterns
-  * Template Method Pattern
-  * Command Pattern
-  * Strategy Pattern
-  * Chain-of-responsibility Pattern
-  * Iterator Pattern
+* [Structural Patterns](structural-patterns/README.md)
+  * [Proxy Pattern](structural-patterns/proxy.md)
+  * [Bridge Pattern](structural-patterns/bridge.md)
+  * [Decorator Pattern](structural-patterns/decorator.md)
+  * [Flyweight Pattern](structural-patterns/flyweight.md)
+  * [Facade Pattern](structural-patterns/facade.md)
+  * [Adapter Pattern](structural-patterns/adapter.md)
+  * [Composite Pattern](structural-patterns/composite.md)
+* [Behavioral Patterns](behavioral-patterns/README.md)
+  * [Template Method Pattern](behavioral-patterns/template-method.md)
+  * [Command Pattern](behavioral-patterns/command.md)
+  * [Strategy Pattern](behavioral-patterns/strategy.md)
+  * [Chain-of-responsibility Pattern](behavioral-patterns/chain-of-responsibility.md)
+  * [Iterator Pattern](behavioral-patterns/iterator.md)
   * [Observer Pattern](behavioral-patterns/observer.md)
-  * Interpreter Pattern
-  * State Pattern
-  * Mediator Pattern
-  * Visitor Pattern
-  * Memento Pattern
-  * Concurrency Pattern
-* Compare Patterns
+  * [Interpreter Pattern](behavioral-patterns/interpreter.md)
+  * [State Pattern](behavioral-patterns/state.md)
+  * [Mediator Pattern](behavioral-patterns/mediator.md)
+  * [Visitor Pattern](behavioral-patterns/visitor.md)
+  * [Memento Pattern](behavioral-patterns/memento.md)
